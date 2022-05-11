@@ -16,6 +16,14 @@
 >>- Couleurs
 >>- Polices
 >>- Présentation en image
+>- WireFrame
+>>- Header
+>>- Content
+>>- Footer
+>- HighFidelity
+>>- Header
+>>- Content
+>>- Footer
 ----------
 ## L'idée
 >## La Suisse
@@ -58,11 +66,24 @@
 > ## Moodboard
 >> ### Couleurs :
 >>> <img src="img/clr.png" alt="Couleurs du site"> <br>
-
->>> **Pourquoi ces couleurs ? ...** Car ces couleurs font références au blason de berne et les pourcentages représente la quantitée qui sera utilisé sur le site final <br> <br> <img src="img/blason.png" alt="Blason berne">
+>>> **Pourquoi?** J'ai opté pour des couleurs simple pour que ce soit agréable a l'oeuil et valoriser l'aspect moderne
 >> ### Polices :
 >>>  <img src="img/polices.png" alt="Polices du site"> <br>
 >>>Sulphur point
 >> ### Présentation du moodboard : 
 >>> <img src="img/moodboard.png" alt="Polices du site"> <br>
+> ## Wireframe
+>> ### Header :
+>>> <img src="img/Design-Desktop-3-Header.png" alt="Haut de page du site">
+>> ### Content :
+>>> <img src="img/Design-Desktop-3-Content.png" alt="Contenue du site">
+>> ### Footer :
+>>> <img src="img/Design-Desktop-3-Footer.png" alt="Bas de page du site">
 ----
+> ## HighFidelity
+>> ### Header :
+>>> <img src="img/HighFidelity-Desktop-3-Header.png" alt="Haut de page du site">
+>> ### Content :
+>>> <img src="img/HighFidelity-Desktop-3-Content.png" alt="Contenue du site">
+>> ### Footer :
+>>> <img src="img/HighFidelity-Desktop-3-Footer.png" alt="Bas de page du site">
