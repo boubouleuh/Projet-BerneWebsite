@@ -12,18 +12,21 @@
 >- Documentations
 ---------------------
 > ### Création du site
->- Moodboard
+>- Moodboard :
 >>- Couleurs
 >>- Polices
 >>- Présentation en image
->- WireFrame
+>- WireFrame :
+>>- Footer
+>- HighFidelity :
 >>- Header
 >>- Content
 >>- Footer
->- HighFidelity
->>- Header
->>- Content
->>- Footer
+>>- NewsLetter
+>- Animations et transitions prévu :
+>>- Hover
+>>- Scrolling
+>>- NewsLetter
 ----------
 ## L'idée
 >## La Suisse
@@ -69,7 +72,7 @@
 >>> **Pourquoi?** J'ai opté pour des couleurs simple pour que ce soit agréable a l'oeuil et valoriser l'aspect moderne
 >> ### Polices :
 >>>  <img src="img/polices.png" alt="Polices du site"> <br>
->>>Sulphur point
+>>>Poppins
 >> ### Présentation du moodboard : 
 >>> <img src="img/moodboard.png" alt="Polices du site"> <br>
 > ## Wireframe
@@ -87,3 +90,31 @@
 >>> <img src="img/HighFidelity-Desktop-3-Content.png" alt="Contenue du site">
 >> ### Footer :
 >>> <img src="img/HighFidelity-Desktop-3-Footer.png" alt="Bas de page du site">
+>> ### NewsLetter :
+>>> <img src="img/HighFidelity-Desktop-3-Footer-NewsLetter.png" alt="NewsLetter du site">
+---
+> ## Animations et transitions prévu
+>> ### Hover :
+>>><br>Liens du menu :<br>
+>>> <img src="img/menu-links.png"> <img src="img/menu-links-hover.png">
+>>><br>Icones du menu :<br>
+>>> <img src="img/menu-icons.png"> <img src="img/menu-icons-hover.png">
+>>><br>Boutons "en savoir plus" :<br>
+>>> <img src="img/button-seemore.png"> <img src="img/button-seemore-hover.png">
+>>><br>Boutons "Découvrir" :<br>
+>>> <img src="img/button-discover.png"> <img src="img/button-discover-hover.png">
+>>><br>Boutons NewsLetter :<br>
+>>> <img src="img/footer-newsletter.png"> <img src="img/footer-newsletter-hover.png">
+>>><br>Icones du footer :<br>
+>>><img src="img/footer-icons.png"> <img src="img/footer-icons-hover.png">
+>>><br>Liens du menu :<br>
+>>><img src="img/footer-links.png"> <img src="img/footer-links-hover.png">
+>>><br>Bouton NewsLetter ouvert :<br>
+>>><img src="img/footer-newsletter-close.png"> <img src="img/footer-newsletter-close-hover.png">
+>>><br>Formulaire NewsLetter :<br>
+>>><img src="img/footer-newsletter-form.png"><img src="img/footer-newsletter-form-hover.png">
+>> ### Scrolling
+>>>Les images / bouton et peut être les textes ou seulement certains se dévoileront au fur et a mesure du scroll
+>> ### NewsLetter :
+>>> Une fois le bouton "NewsLetter" cliquez le bouton se transformera en fleche vers le haut avec une animation puis une transition fera doucement apparaitre le background noir puis le formulaire
+---
