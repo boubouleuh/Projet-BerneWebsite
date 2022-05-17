@@ -1,0 +1,79 @@
+:root
+{
+    --main-font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    margin: 0;
+}
+main
+{
+    font-family: var(--main-font-family);
+}
+
+/* DEBUT CODE DU HEADER */
+
+#header-menu
+{
+    display: flex;
+    height: 70px;
+    background-color: black;
+
+}
+#header-menu #links
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    gap:4.375rem;
+}
+#header-menu #links a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+}
+#header-menu a:hover
+{
+    opacity: 75%;
+    color:white;
+    transition: 200ms;
+    margin-bottom:5px;
+}
+#header-menu #icons
+{
+    gap:2.8125rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 3.25rem;
+}
+#header-menu #icons svg
+{
+    fill:white;
+}
+.logo
+{
+    align-self: flex-start;
+    gap:.625rem;
+    height: 56px;
+    padding-left: 1.1875rem;
+    display: inline-grid;
+    box-sizing: border-box;
+    font-family: 'Monda', sans-serif;
+    font-size: 2.75rem;
+    color:white;
+}
+.logo img
+{
+    padding-top: .875rem;
+    grid-column: 2;
+    margin-top:0px;
+    width: 20px;
+    height: 20px;
+}
+
+/* FIN CODE DU HEADER */
