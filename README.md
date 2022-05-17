@@ -17,6 +17,8 @@
 >>- Polices
 >>- Présentation en image
 >- WireFrame :
+>>- Header
+>>- Content
 >>- Footer
 >- HighFidelity :
 >>- Header
@@ -26,6 +28,15 @@
 >- Animations et transitions prévu :
 >>- Hover
 >>- Scrolling
+>>- NewsLetter
+>- Mobile WireFrame :
+>>- Header
+>>- Content
+>>- Footer
+>- Mobile HIghFidelity :
+>>- Header
+>>- Content
+>>- Footer
 >>- NewsLetter
 ----------
 ## L'idée
@@ -118,3 +129,24 @@
 >> ### NewsLetter :
 >>> Une fois le bouton "NewsLetter" cliquez le bouton se transformera en fleche vers le haut avec une animation puis une transition fera doucement apparaitre le background noir puis le formulaire
 ---
+
+> ## Mobile Wireframe
+>> ### Header :
+>>><img src="img/Design-mobile-header.png">
+>>><img src="img/Design-mobile-header-menu-open.png">
+>> ### Content :
+>>><img src="img/Design-mobile-content.png">
+>> ### Footer : 
+>>><img src="img/Design-mobile-footer.png">
+---
+
+> ## Mobile HighFidelity 
+>> ### Header :
+>>><img src="img/HighFidelity-Mobile-Header.png">
+>>><img src="img/HighFidelity-Mobile-Header-menu.png">
+>> ### Content :
+>>><img src="img/HighFidelity-mobile-content.png">
+>> ### Footer :
+>>><img src="img/HighFidelity-mobile-footer.png">
+>> ### NewsLetter :
+>>><img src="img/HighFidelity-mobile-footer-newsletter.png">
