@@ -5,6 +5,7 @@
 
 body
 {
+    overflow-x: hidden;
     margin: 0;
 }
 main
@@ -14,11 +15,37 @@ main
 
 /* DEBUT CODE DU HEADER */
 
+h1
+{
+    margin:0;
+    font-weight: 400;
+    padding-left: 1.1875rem;
+    font-family: 'Qwigley', cursive;
+    font-size: 8rem;
+}
+#berne-background
+{
+    padding-top: 8.5rem;
+    z-index: -1;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    background-size: cover;
+    background-image: url("media/bern.webp");
+    width: 100%;
+}
+#background-fix
+{
+    height: 100vh;
+}
+
 #header-menu
 {
+    position:fixed;
     display: flex;
     height: 70px;
     background-color: black;
+    width: 100vw;
 
 }
 #header-menu #links
@@ -36,6 +63,7 @@ main
     color:white;
     font-size: 1.5rem;
 }
+
 #header-menu a:hover
 {
     opacity: 75%;
@@ -77,3 +105,109 @@ main
 }
 
 /* FIN CODE DU HEADER */
+
+/* DEBUT CODE DU CONTENT */
+#container
+{
+    background-image: url("media/circle-top-left.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-bottom: 180px;
+    background-color: #F4F4F4;
+}
+
+.button-content:hover
+{
+    opacity: 75%;
+}
+.see-more
+{
+    align-items: center;
+    display: flex;
+    border-radius: .625rem; 
+    font-size: 1.5rem;
+    padding: .4375rem 2.125rem;
+    background-color: black;
+    color:white;
+    text-decoration: none;
+}
+.btncircle
+{
+    margin-left:-17px;
+    display: block;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+    grid-row: 2;
+    height: 35px;
+    width: 35px;
+    background-image: url("media/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: white;
+}
+.button-content
+{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.important-text
+{
+    gap:30px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    display: grid;
+    background-image: url("media/ours.svg");
+    background-repeat: no-repeat;
+    background-position:110% bottom;
+    background-size: 90vh;
+    padding-top: 13.75rem;
+    padding-left: 12.1875rem;
+    font-size: 2rem;
+}
+
+.important-text #text1
+{
+    margin: 0;
+    grid-row: 1;
+}
+.important-text #text2
+{
+    margin: 0;
+    grid-row: 3;
+}
+#ours1
+{
+    width: fit-content;
+    grid-row: 1;
+    grid-column: 2;
+    height: 535px;
+}
+.img-content #img1
+{
+    grid-row: 1;
+    margin-right: 12.1875rem;
+    height: auto;
+    width: 60%;
+    justify-self: flex-end;
+}
+.img-content #img2
+{
+    grid-row: 2;
+    margin-left: 12.1875rem;
+    height: auto;
+    width: 60%;
+}
+.img-content #img3
+{
+    grid-row: 3;
+    margin-right: 12.1875rem;
+    height: auto;
+    width: 60%;
+    justify-self: flex-end;
+}
+.img-content
+{
+    row-gap: 7.125rem;
+    display: grid;
+}
