@@ -2,24 +2,41 @@
 {
     --main-font-family: 'Poppins', sans-serif;
 }
-
 body
 {
+    background-color: black;
     overflow-x: hidden;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+body::-webkit-scrollbar-track {
+background: black;        
+}
+  
+body::-webkit-scrollbar-thumb {
+background-color: white;  
+border: 3px solid black; 
+}
 main
 {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
     font-family: var(--main-font-family);
+
 }
 
 /* DEBUT CODE DU HEADER */
 
 h1
 {
+    transition: 1000ms;
+    transform: translateX(-63.1712vw);
+    
     margin:0;
     font-weight: 400;
-    padding-left: 1.2003vw;
     font-family: 'Qwigley', cursive;
     font-size: 8.0859vw;
 }
@@ -27,17 +44,18 @@ h1
 {
     padding-top: 8.5913vw;
     z-index: -1;
-    height: 100vh;
+    height: 50vw;
     position: fixed;
     top:0;
     background-size:cover;
     background-repeat: no-repeat;
     background-image: url("media/bern.webp");
+
     width: 100vw;
 }
 #background-fix
 {
-    height: 100vh;
+    height: 50vw;
 }
 
 #header-menu
@@ -71,7 +89,7 @@ h1
     opacity: 75%;
     color:white;
     transition: 200ms;
-    margin-bottom:.3159vw;
+    padding-bottom:.3159vw;
 }
 #header-menu #icons
 {
@@ -249,6 +267,7 @@ h1
 }
 #imgstart
 {
+    transition: 1000ms;
     grid-row: 1;
     grid-column: 1/3;
     height: auto;
@@ -256,7 +275,8 @@ h1
     justify-self: flex-end;
 }
 #imgmiddle
-{
+{    
+    transition: 500ms;
     grid-row: 2;
     grid-column: 1/3;
     height: auto;
@@ -264,6 +284,7 @@ h1
 }
 #imgend
 {
+    transition: 500ms;
     grid-row: 3;
     grid-column: 1/3;
     height: auto;
@@ -334,12 +355,95 @@ h1
 }
 #bottomshape
 {
+    display: flex;
+    width: 100%;
     box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.25);
     height: 20%;
     background-color: black;
     border-radius:0px 0px 1.2634vw 1.2634vw;
+    align-items: center;
+    justify-content: center;
 }
-#bottomshape a
-{
+.divbutton
+{  
+    display: inline;
+    font-size: 1.0107vw;
+    text-align: center;
+    margin:0;
+    width: 100%;
+    height: 100%;
     color:white;
+    border-radius:0px 0px 1.2634vw 1.2634vw;
+    transition: 1000ms;
+    text-decoration: none;
+}
+.divbutton:hover
+{
+    opacity: 75%;
+}
+.buttonfloat
+{
+    display: inline;
+    height: 3.1586vw;
+    width: 3.1586vw;
+    position: absolute;
+    left:23.0575vw;
+    background-size: 2.211vw;
+}
+.centerbutton
+{
+
+    left:88.8000vw;
+
+}
+.visible
+{
+    visibility: visible;
+}
+h3
+{
+    
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+    color:white;
+    font-size: 6.0644vw;
+    margin:0;
+}
+#banner
+{
+    display: grid;
+    margin-top: 9.602vw;  
+}
+#banner img
+{
+    height: auto;
+    width: 8vw;
+    justify-self: center;
+    border: solid white 2px;
+    background-color: white;
+    border-radius: 0px 0px 74px 74px;
+    z-index: 1;
+    grid-row: 1;
+    grid-column: 1;
+}
+#banner-background
+{
+    filter:brightness(75%);
+    grid-row: 1;
+    grid-column: 1;
+    height: 45vw;
+    width: 100%;
+    background-image:url("media/bus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;  
+}
+#banner-content
+{
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
 }
