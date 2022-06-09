@@ -134,7 +134,6 @@ h1
     background: url("media/circle-top-left.svg"), url("media/circle-middle-left.svg"), url("media/circle-pre_end-right.svg");
     background-repeat: no-repeat;
     background-position: top left, center left, top 75% right;
-    padding-bottom: 180px;
     background-size: 10vw;
     background-color: #F4F4F4;
 }
@@ -446,4 +445,37 @@ h3
     z-index: 1;
     grid-column: 1;
     grid-row: 1;
+}
+#btfbern
+{
+    background-image: url("media/circle-bottom-left.svg");
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    background-position: top -12.6342vw left;
+    overflow: hidden;
+    padding-top: 7vw;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    column-gap: 3.1586vw;
+    font-size: 2.0215vw;
+    margin-right: -6.3171vw;
+    padding-bottom: 7vw;
+}
+#bfttop
+{
+    overflow: hidden;
+    margin-left: 12.3184vw;
+}
+#imgbatiment
+{
+    background-image: url("media/batiment.jpg");
+    box-shadow: -5px 10px 4px rgba(0, 0, 0, 0.25);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 31.5856vw;
+    height: 31.5856vw;
+    border-radius: 315.856vw;
+    transform: translateX(6.3171vw) translateY(8.844vw);
 }
