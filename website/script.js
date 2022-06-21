@@ -23,7 +23,6 @@ const callback = function( entries, observer ) {
   // Log observer entry data.
   console.log( observedImg );
 
-  // Add or remove the blur.
    if (!observedImg.isIntersecting) {
     observedImg.target.style.transition = '';
     console.log(observedImg,img2)
@@ -55,11 +54,18 @@ const btncircleNewsletter = newsletterButton.querySelector("div").querySelector(
 const btnP = newsletterButton.querySelector("div").querySelector("p");
 const newsletterDiv = newsletterButton.querySelector("div")
 const footerlinks = document.getElementById("footerlinks")
+const burgerdiv = document.getElementById("burgermenudiv")
 newsletterButton.addEventListener('click', function(){
     newsletterButton.classList.toggle("newsletter-activate-button")
     btncircleNewsletter.classList.toggle("btncircle-newsletter")
     footerReplace.classList.toggle("footerreplacevisible")
+    document.getElementById("iconlink").classList.toggle("iconlinksmove")
 })
+
+burgerdiv.addEventListener('click', () => {
+    burgerdiv.classList.toggle("burgerdivopen")
+})
+
 
 const callback2 = function( entries, observer ) {
     // Target the first entry available.
@@ -80,3 +86,30 @@ const callback2 = function( entries, observer ) {
   };
 const observer2 = new IntersectionObserver( callback2 );
 observer2.observe(footer);
+
+
+window.addEventListener('resize', mobileSize)
+
+function mobileSize(params) {
+    if (window.innerWidth < 576){
+        const btncircles = document.querySelectorAll(".btncircle")
+        const btnfloats = document.querySelectorAll(".buttonfloat")
+        btnfloats[1].classList.remove('buttonfloatmiddle')
+        btncircles.forEach(element => {
+            element.classList.add("centerbutton")
+        });
+
+        document.getElementById("footerlinks").append(document.getElementById("iconlink"))
+    }else{
+        
+        const btncircles = document.querySelectorAll(".btncircle")
+        const btnfloats = document.querySelectorAll(".buttonfloat")
+        btnfloats[1].classList.add('buttonfloatmiddle')
+        btncircles.forEach(element => {
+            element.classList.remove("centerbutton")
+        });
+
+        document.getElementById("footerheader").append(document.getElementById("iconlink"))
+    }
+}
+mobileSize()
