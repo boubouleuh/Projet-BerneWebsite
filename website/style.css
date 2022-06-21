@@ -774,7 +774,7 @@ form
         padding-top: 29.565vw;
         padding-left: 0;
         padding-right: 0;
-        font-size: 4.174vw;
+        font-size: 5vw;
         text-align: center;
         justify-items: center;
         background-size: 86.957vw;
@@ -785,26 +785,16 @@ form
 
 
     }
-    .see-more
-    {
-        align-items: center;
-        display: flex;
-        border-radius: 1.739vw;
-        font-size: 2.783vw;
-        padding: 1.217vw 5.217vw;
-        background-color: black;
-        color:white;
-        text-decoration: none;
-    }
+
     .btncircle
     {
-        margin-left:-2.957vw;
-        box-shadow: 0.870vw 0.696vw 1.043vw rgba(0, 0, 0, 0.25);
+        margin-left: -2.957vw;
+        box-shadow: 0.87vw 0.696vw 1.043vw rgb(0 0 0 / 25%);
         border-radius: 12.174vw;
-        height: 5.217vw;
-        width: 5.217vw;
-        background-image: url("media/arrow.svg");
-        background-size: 3.826vw;
+        height: 7vw;
+        width: 7vw;
+        background-image: url(media/arrow.svg);
+        background-size: 5vw;
     }
     .buttondiv
     {
@@ -898,8 +888,8 @@ form
     #shape1
     {
         margin: auto;
-        height: 37.043vw;
-        width: 60.870vw;
+        height: 65.174vw;
+        width: 70.870vw;
         grid-row: 1;
         grid-column: 2;
         z-index: 1;
@@ -909,8 +899,8 @@ form
     #shape2
     {
         margin: auto;
-        height: 37.043vw;
-        width: 60.870vw;
+        height: 65.174vw;
+        width: 70.870vw;
         grid-row: 1;
         grid-column: 1;
         z-index: 1;
@@ -918,8 +908,8 @@ form
     #shape3
     {
         margin: auto;
-        height: 37.043vw;
-        width: 60.870vw;
+        height: 65.174vw;
+        width: 70.870vw;
         grid-row: 3;
         grid-column: 1;
         z-index: 1;
@@ -933,7 +923,7 @@ form
     }
     #topshape h2
     {
-        font-size: 4.174vw;
+        font-size: 6vw;
         padding-top: 3.130vw;
         margin: 0;
         font-style: normal;
@@ -945,8 +935,10 @@ form
     {
         font-style: normal;
         font-weight: 400;
-        font-size: 2.435vw;
+        font-size: 4vw;
         padding-top: 3.130vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
         text-align: center;
         letter-spacing: 0.06em;
         margin: 0;
@@ -962,12 +954,17 @@ form
         align-items: center;
         justify-content: center;
     }
+    #bottomshape p
+    {
+        font-size: 3.5vw;
+    }
+
     .see-more
     {
         align-items: center;
         display: flex;
         border-radius: 1.739vw;
-        font-size: 2.783vw;
+        font-size: 5vw;
         padding: 1.739vw 6.957vw;
         background-color: black;
         color:white;
@@ -994,7 +991,7 @@ form
     }
     .centerbutton
     {
-        left:80.870vw;
+        left:84.87vw;
     }
     #container
     {
@@ -1048,7 +1045,8 @@ form
     {
         text-align: center;
         text-shadow: 0.348vw 0.696vw 0.696vw rgba(0, 0, 0, 0.5);
-        font-size: 7.478vw;
+        font-size: 9vw;
+        padding-bottom: 5vw;
 
     }
     .buttondiv
@@ -1066,10 +1064,10 @@ form
     #imgbatiment
     {
         box-shadow: 0.870vw 1.739vw 0.696vw rgba(0, 0, 0, 0.25);
-        width: 34.783vw;
-        height: 34.783vw;
+        width: 50vw;
+        height: 50vw;
         border-radius: 869.565vw;
-        transform: translateY(-26.087vw)translateX(22.609vw);
+        transform: translateY(-40.087vw)translateX(15.609vw);
         grid-row: 1;
         grid-column: 2;
 
@@ -1082,7 +1080,7 @@ form
         padding-top: 7vw;
         display: grid;
         column-gap: 0vw;
-        font-size: 4.174vw;
+        font-size: 5vw;
         margin-right: unset;
         padding-bottom: 7vw;
         justify-content: center;
@@ -1124,7 +1122,7 @@ form
     {
 
         user-select: none;
-        font-size: 2.783vw;
+        font-size: 4vw;
         margin: 0;
         border: solid 0.174vw white;
         padding: 1.217vw 3.478vw;
@@ -1156,14 +1154,14 @@ form
 
         grid-column: 3;
         display: flex;
-        column-gap:3.478vw;
+        column-gap:5vw;
         justify-self: flex-end;
     }
     #iconlink svg
     {
         fill:black;
-        height: 6.087vw;
-        width: 6.087vw;
+        height: 7.5vw;
+        width: 7.5vw;
     }
     #footerlinks
     {
@@ -1180,7 +1178,7 @@ form
         transition: all 0.3s ease-in-out;
         text-decoration: none;
         color: black;
-        font-size: 2.783vw;
+        font-size: 4vw;
         width: fit-content;
     }
     #footerlinks a:hover
@@ -1192,7 +1190,7 @@ form
     {
         margin: 0;
         font-weight: 500;
-        font-size: 5.565vw !important;
+        font-size: 6vw !important;
     }
     #plusfooter
     {
@@ -1233,9 +1231,9 @@ form
     {
         transition: all 0.5s ease-in-out;
         border: solid 0.174vw white;
-        width: 60.870vw;
-        font-size: 2.783vw;
-        padding: 2.261vw 3.478vw;
+        width: 65vw;
+        font-size: 4vw;
+        padding: 3vw 4vw;
         border-radius: 5.217vw;
     }
     #footerreplace button
@@ -1243,7 +1241,7 @@ form
         border: solid white .0632vw;
         font-size: 4.174vw;
         margin-top: 9.565vw;
-        padding:    1.217vw 9.391vw;
+        padding:    3vw 15vw;
         border-radius: 1.739vw;
     }
     .iconlinksmove
@@ -1263,22 +1261,22 @@ form
     }
     #linksburger
     {
-        gap:8.696vw;
-        font-size: 4.174vw;
+        gap:7vw;
+        font-size: 5vw;
         flex-direction: column  ;
         display: flex;
     }
     #firstlink
     {
-        transform: translateX(-17.391vw);
+        transform: translateX(-20vw);
     }
     #secondlink
     {
-        transform: translateX(-3.478px);
+        transform: translateX(-35px);
     }
     #thirdlink
     {
-        transform: translateX(10.435vw);
+        transform: translateX(5vw);
     }
     #linksburger a
     {
@@ -1295,8 +1293,8 @@ form
     }
     #linksburger #icons a svg
     {
-        width: 5.217vw;
-        height: 5.217vw;
+        width: 6vw;
+        height: 6vw;
         fill:black;
     }
     #burgermenudiv
@@ -1339,7 +1337,7 @@ form
         justify-content: start !important;
         padding-left:60.87vw !important;
         position: absolute;
-        height: 60.87vw !important;
+        height: 70.87vw !important;
     }
     #burgersvg .line3
     {
