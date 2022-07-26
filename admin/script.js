@@ -25,6 +25,12 @@ function rows(myJson){
                 fetch("delete.php",{
                     method: 'POST',
                     body: data
+                }).then(function (response){
+                    length -= 1;
+                    compteurNow.textContent = length;
+                    compteurTotal.textContent = compteurTotal.textContent - 1;
+
+
                 })
                 confirmation.classList.remove("hidden");
             })
@@ -34,23 +40,35 @@ function rows(myJson){
         })
     });
 }
+const compteurNow = document.querySelector('.compteur-now')
+const compteurTotal = document.querySelector('.compteur-total')
+fetch('count.php',{
+    method: 'POST'
+})
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        compteurTotal.textContent = myJson[0][0]
+
+    })
+
+
 
 searchInput = document.querySelector(".search")
-
-let number = new FormData();
-number.append("morecycle",0);
-
 fetch('getdb.php',{
-    method: 'POST',
-    body: number })
+    method: 'POST'})
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
+            length = myJson.length
+            compteurNow.textContent = length
             rows(myJson)
         })
 const showMore = document.querySelector(".voir_plus");
 showMore.addEventListener("click", function(){
+
     let limit = document.querySelectorAll('tbody tr').length
     let data = new FormData();
     data.append("limit", limit);
@@ -63,6 +81,8 @@ showMore.addEventListener("click", function(){
     })
         .then(function (myJson) {
             console.log(myJson)
+            length += myJson.length
+            compteurNow.textContent = length
             if (myJson.length < 10){
                 console.log("true")
                 showMore.classList.remove("displayvisible")
@@ -79,16 +99,30 @@ showMore.addEventListener("click", function(){
 
 
 searchInput.addEventListener("keyup", function (e) {
+    let tbody = document.querySelector("tbody");
     if (this.value == ""){
+        tbody.querySelectorAll('tr').forEach(function (element) {
+            element.remove()
+        })
         showMore.classList.add("displayvisible")
+        fetch('getdb.php',{
+            method: 'POST'})
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                rows(myJson)
+            })
+        return false;
+
+
 
     }else
     {
         showMore.classList.remove("displayvisible")
     }
     console.log(e.key)
-    if (e.key != "Enter" && e.key != "AltGraph" && e.key != "Control") {
-        let tbody = document.querySelector("tbody");
+    if (e.key != "Enter" && e.key != "AltGraph" && e.key != "Control" && e.key != "Alt" ) {
         tbody.querySelectorAll('tr').forEach(function (element) {
             element.remove()
         })
@@ -103,6 +137,9 @@ searchInput.addEventListener("keyup", function (e) {
             .then(function (response) {
                 return response.json();
             }).then(function (myJson) {
+            console.log(myJson)
+            compteurNow.textContent = myJson.length;
+            compteurTotal.textContent = myJson.length;
             rows(myJson)
         })
     }}

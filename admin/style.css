@@ -91,6 +91,15 @@ th
     font-size:24px;
     padding-bottom:16px;
 }
+.titletable th:nth-child(1){
+    width:50%
+}
+.titletable th:nth-child(2){
+    width:35%
+}
+.titletable th:nth-child(3){
+    width:15%
+}
 td
 {
     font-size:30px;
@@ -192,9 +201,10 @@ img:hover
 }
 .voir_plus-flex
 {
-    display: flex;
-    justify-content:center;
-    align-items:center;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 0.5fr;
+    justify-content: center;
+    align-items: center;
 }
 .voir_plus
 {

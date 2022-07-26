@@ -48,18 +48,22 @@ session_start();
                     </div>
                 </div>
             <div id="content">
+
                     <table class="customTable">
                         <thead>
-                        <tr>
+                        <tr class="titletable">
                             <th>Adresse email : </th>
                             <th>Date d'inscription : </th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
 
                         </tbody>
                     </table>
+
                 <div class="voir_plus-flex">
+                    <p class="counter"><span class="compteur-now">0</span> sur <span class="compteur-total">0</span></p>
                 <button type="button" class="voir_plus">Voir plus</button>
                 </div>
                 <template id="productrow">
