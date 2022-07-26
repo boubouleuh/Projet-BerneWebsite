@@ -111,7 +111,20 @@ searchInput.addEventListener("keyup", function (e) {
                 return response.json();
             })
             .then(function (myJson) {
+                length = myJson.length
+                compteurNow.textContent = length
                 rows(myJson)
+
+            })
+        fetch('count.php',{
+            method: 'POST'
+        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                compteurTotal.textContent = myJson[0][0]
+
             })
         return false;
 
