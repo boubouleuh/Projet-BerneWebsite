@@ -62,7 +62,7 @@ main
     padding:20px;
     box-sizing: border-box;
     background-color: white;
-    height:90%;
+    height: 85%;
 }
 #content1
 {
@@ -112,10 +112,6 @@ tr:nth-child(even)
 
     background-color:#E9E9E9;
 }
-.emailtd
-{
-    width:50%;
-}
 
 .in-td
 {
@@ -139,8 +135,10 @@ img:hover
 }
 .logout-top a
 {
-    grid-row: 1;
+    height: fit-content;
     justify-self: end;
+    align-self: center;
+    grid-row: 1;
 }
 .logout-top p
 {
@@ -222,13 +220,14 @@ img:hover
 }
 .voir_plus
 {
+    border-color: black;
     display:none;
     color:white;
     border-radius: 20px;
     background-color: black;
     margin-top: 20px;
     font-size:20px;
-    padding: 10px 300px;
+    padding: 10px 30%;
 }
 
 .voir_plus:hover
@@ -253,8 +252,60 @@ img:hover
 {
     padding-left: 20px;
 }
+@media screen and (max-width:800px) {
+    .counter
+    {
+        text-align: center;
+    }
+    .voir_plus-flex {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .voir_plus-flex .displayvisible {
+        grid-row: 1;
+    }
 
-@media screen and (max-width:575.98px) {
+    .logout-top p {
+        justify-self: start;
+        font-size: 35px;
+    }
+    .mobile-display
+    {
+        display: none;
+    }
+    .search
+    {
+        width: 75%;
+        justify-self: center;
+    }
+    #top
+    {
+        justify-content: center;
+    }
+    .export
+    {
+        font-size: 16px;
+    }
+    .voir_plus
+    {
+        padding: 2% 2%;
+    }
+    .logout-top
+    {
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:580px) {
+    .logout-top a
+    {
+        justify-self: center;
+    }
+    .logout-top p
+    {
+        display: none;
+    }
     .mobile-display
     {
         display: none;
@@ -268,12 +319,10 @@ img:hover
     {
         overflow-y: unset;
     }
-    main
-    {
-        justify-content: unset;
-    }
+
     #top
     {
+
         display: unset;
         text-align: center;
     }
@@ -287,31 +336,14 @@ img:hover
         display: grid;
         gap:10px;
     }
-    .search
-    {
-
-
-    }
     td
     {
         font-size:18px;
-    }
-    .export
-    {
-        padding: 3px 10px;
-        font-size: 18px;
-        height: fit-content;
-        grid-column: 1;
-        grid-row:2;
-        width: fit-content;
     }
     th
     {
         font-size:20px;
         padding-bottom:16px;
     }
-    .voir_plus
-    {
-        padding: 2% 2%;
-    }
+
 }
