@@ -62,9 +62,7 @@ if (isset($_POST['pass']) and isset($_POST['id'])){
         <h1>AdminPanel</h1>
     </header>
         <div class="container">
-            <div class="logo">
-                <span>Bern</span><img src="/media/flag.webp" height="160" width="160" alt="petit logo suisse">
-            </div>
+
             <div class="formdiv">
                 <form method="post" novalidate>
                 <label>

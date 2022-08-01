@@ -62,7 +62,7 @@ main
     padding:20px;
     box-sizing: border-box;
     background-color: white;
-    height: 85%;
+    height: 75%;
 }
 #content1
 {
@@ -173,8 +173,9 @@ img:hover
 .confirm-background
 {
     border-radius: 50px;
-    height:30%;
-    width:30%;
+    height: fit-content;
+    width: fit-content;
+    padding: 30px 30px;
     background-color:black;
     position:fixed;
     display:flex;
@@ -238,6 +239,7 @@ img:hover
 
 .search
 {
+    justify-self: center;
     font-size:20px;
     padding: 10px 5px;
     border: solid 1px black;
@@ -253,6 +255,22 @@ img:hover
     padding-left: 20px;
 }
 @media screen and (max-width:800px) {
+    img:hover
+    {
+        opacity:unset;
+    }
+    .confirm button
+    {
+        font-size: 20px;
+    }
+    .confirm-flex
+    {
+        font-size: 20px;
+    }
+    .confirm p
+    {
+        text-align: center;
+    }
     .counter
     {
         text-align: center;
@@ -298,6 +316,14 @@ img:hover
     }
 }
 @media screen and (max-width:580px) {
+    .confirm button
+    {
+        font-size: 15px;
+    }
+    .confirm-flex
+    {
+        font-size: 15px;
+    }
     .logout-top a
     {
         justify-self: center;
