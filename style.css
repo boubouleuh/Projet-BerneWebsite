@@ -86,9 +86,9 @@ h1
     color:white;
     font-size: 1.5161vw;
 }
-.buttonfloatmiddle
+#bottomshape .buttonfloatmiddle
 {
-    left:88.7vw !important;
+    left:88.7vw;
 }
 #header-menu a:hover
 {
@@ -612,7 +612,7 @@ h3
 {
     margin: 0;
     font-weight: 500;
-    font-size: 2.0215vw !important;
+    font-size: 2.0215vw;
 }
 #plusfooter
 {
@@ -699,11 +699,11 @@ footer
 {
     opacity: 75%;
 }
-.footerreplacevisible
+#container .footerreplacevisible
 {
     z-index: 3;
     background: rgb(0,0,0);
-    opacity: 100% !important;
+    opacity: 100% ;
 }
 form
 {
@@ -1195,11 +1195,11 @@ form
         opacity: 75%;
         text-decoration: underline;
     }
-    .linktitle
+    #footerlinks .linktitle
     {
         margin: 0;
         font-weight: 500;
-        font-size: 6vw !important;
+        font-size: 6vw;
     }
     #plusfooter
     {
@@ -1257,9 +1257,9 @@ form
     {
         transform: translateY(-12.522vw);
     }
-    .iconlinksmove svg
+    #footerlinks .iconlinksmove svg
     {
-        fill:white !important;
+        fill:white;
     }
     #flexburger
     {
@@ -1322,11 +1322,11 @@ form
         align-content: start;
     }
 
-    .burgerdivopen #burgermenu
+    #flexburger .burgerdivopen #burgermenu
     {
-        visibility: visible !important;
-        opacity: 100% !important;
-        transition: 3s 0.2s !important;
+        visibility: visible ;
+        opacity: 100% ;
+        transition: 3s 0.2s ;
     }
     #burgermenudiv #burgermenu
     {
@@ -1339,14 +1339,14 @@ form
         transition: 0.15s;
 
     }
-    .burgerdivopen
+    #flexburger .burgerdivopen
     {
-        border-radius: 0 0 0 1000px !important;
-        align-content: end!important;
-        justify-content: start !important;
-        padding-left:60.87vw !important;
+        border-radius: 0 0 0 1000px ;
+        align-content: end;
+        justify-content: start ;
+        padding-left:60.87vw ;
         position: absolute;
-        height: 70.87vw !important;
+        height: 70.87vw ;
     }
     #burgersvg .line3
     {
