@@ -38,16 +38,13 @@ body
 }
 #top
 {
-    width:content-box;
     justify-content: space-between;
     align-items: center;
     display: flex;
 }
-#top p
-{
-    font-size: 48px;
-    margin: 0;
-}
+
+
+
 
 main
 {
@@ -135,6 +132,23 @@ img:hover
 {
     cursor:pointer;
     opacity:75%;
+}
+.logout-top
+{
+    display: grid;
+}
+.logout-top a
+{
+    grid-row: 1;
+    justify-self: end;
+}
+.logout-top p
+{
+
+    font-size: 48px;
+    margin: 0;
+    grid-row: 1;
+    justify-self:start;
 }
 .confirm
 {
@@ -238,4 +252,66 @@ img:hover
 .search[type="text" i]
 {
     padding-left: 20px;
+}
+
+@media screen and (max-width:575.98px) {
+    .mobile-display
+    {
+        display: none;
+    }
+    #content1 {
+        box-sizing: unset;
+        overflow-y: visible;
+
+    }
+    #content
+    {
+        overflow-y: unset;
+    }
+    main
+    {
+        justify-content: unset;
+    }
+    #top
+    {
+        display: unset;
+        text-align: center;
+    }
+    .logout-top p
+    {
+        font-size: 32px;
+        margin: 0;
+    }
+    #top2
+    {
+        display: grid;
+        gap:10px;
+    }
+    .search
+    {
+
+
+    }
+    td
+    {
+        font-size:18px;
+    }
+    .export
+    {
+        padding: 3px 10px;
+        font-size: 18px;
+        height: fit-content;
+        grid-column: 1;
+        grid-row:2;
+        width: fit-content;
+    }
+    th
+    {
+        font-size:20px;
+        padding-bottom:16px;
+    }
+    .voir_plus
+    {
+        padding: 2% 2%;
+    }
 }

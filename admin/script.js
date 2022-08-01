@@ -1,3 +1,9 @@
+const confirmation = document.querySelector(".confirm-flex");
+confirmation.style.display = "none";
+setTimeout(() => {
+    confirmation.style.display = "flex";
+}, "100")
+
 function rows(myJson){
     myJson.forEach(element => {
         let template = document.querySelector("#productrow");
@@ -13,10 +19,11 @@ function rows(myJson){
     const deleteButton = document.querySelectorAll("img");
     deleteButton.forEach(element => {
         element.addEventListener('click', function (e) {
+
             const confirmation = document.querySelector(".confirm-flex");
             const yes = document.querySelector(".yes");
             const no = document.querySelector(".no");
-            confirmation.classList.add("hidden")
+            confirmation.classList.add("hidden");
             yes.addEventListener("click", function () {
                 const email = element.parentElement.parentElement.parentElement
                 email.remove();
@@ -101,35 +108,37 @@ showMore.addEventListener("click", function(){
 searchInput.addEventListener("keyup", function (e) {
     let tbody = document.querySelector("tbody");
     if (this.value == ""){
-        tbody.querySelectorAll('tr').forEach(function (element) {
-            element.remove()
-        })
-        showMore.classList.add("displayvisible")
-        fetch('getdb.php',{
-            method: 'POST'})
-            .then(function (response) {
-                return response.json();
+        if (e.key != "Enter" && e.key != "AltGraph" && e.key != "Control" && e.key != "Alt" ) {
+            tbody.querySelectorAll('tr').forEach(function (element) {
+                element.remove()
             })
-            .then(function (myJson) {
-                length = myJson.length
-                compteurNow.textContent = length
-                rows(myJson)
 
+            fetch('getdb.php', {
+                method: 'POST'
             })
-        fetch('count.php',{
-            method: 'POST'
-        })
-            .then(function (response) {
-                return response.json();
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (myJson) {
+                    length = myJson.length
+                    compteurNow.textContent = length
+                    rows(myJson)
+                    showMore.classList.add("displayvisible")
+                })
+            fetch('count.php', {
+                method: 'POST'
             })
-            .then(function (myJson) {
-                compteurTotal.textContent = myJson[0][0]
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (myJson) {
+                    compteurTotal.textContent = myJson[0][0]
 
-            })
-        return false;
+                })
+            return false;
 
 
-
+        }
     }else
     {
         showMore.classList.remove("displayvisible")
