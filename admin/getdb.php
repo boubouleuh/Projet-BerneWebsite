@@ -21,7 +21,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION);
     $conn->setAttribute(PDO::ATTR_AUTOCOMMIT,FALSE);
-    $sth = $conn->prepare("SELECT * FROM register_newsletter ORDER BY mail LIMIT 10 OFFSET :limit ");
+    $sth = $conn->prepare("SELECT * FROM register_newsletter ORDER BY Date LIMIT 10 OFFSET :limit ");
     $sth -> bindParam(":limit",$a, PDO::PARAM_INT);
     $sth->execute();
     $emails = $sth->fetchALl();

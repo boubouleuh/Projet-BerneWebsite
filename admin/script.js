@@ -62,6 +62,8 @@ fetch('count.php',{
 
 
 
+
+
 searchInput = document.querySelector(".search")
 fetch('getdb.php',{
     method: 'POST'})
@@ -99,7 +101,6 @@ showMore.addEventListener("click", function(){
 
             }
             rows(myJson)
-
 
 })})
 
@@ -174,3 +175,85 @@ fetch('showmorevisible.php', {
         showMore.classList.add('displayvisible');
     }
 })
+
+
+
+
+
+
+// Bubble sort Implementation using Javascript
+
+
+// Creating the bblSort function
+function bblSort(arr){
+
+    for(var i = 0; i < arr.length; i++){
+
+        // Last i elements are already in place
+        for(var j = 0; j < ( arr.length - i -1 ); j++){
+            // Checking if the item at present iteration
+            // is greater than the next iteration
+            if(arr[j][1] > arr[j+1][1]){
+
+                // If the condition is true then swap them
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j+1] = temp
+            }
+        }
+    }
+    // Print the sorted array
+    return(arr);
+
+}
+function bblSort2(arr){
+
+    for(var i = 0; i < arr.length; i++){
+
+        // Last i elements are already in place
+        for(var j = 0; j < ( arr.length - i -1 ); j++){
+            // Checking if the item at present iteration
+            // is greater than the next iteration
+            if(arr[j][1] < arr[j+1][1]){
+
+                // If the condition is true then swap them
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j+1] = temp
+            }
+        }
+    }
+    // Print the sorted array
+    return(arr);
+
+}
+
+
+const chevron1 = document.querySelector('.chevron1');
+let instance = true;
+const titletest = document.querySelector(".titletable");
+let mailArray = [];
+chevron1.addEventListener("click" , function(e) {
+            let trlist = document.querySelector('tbody').children
+            console.log(trlist)
+
+
+        for (let element of trlist) {
+            mailArray.push([element, element.children[0].textContent.toLowerCase()])
+            console.log(mailArray)
+        }
+        if (!instance) {
+            let sort = bblSort(mailArray);
+            chevron1.style.transform = "rotate(-18000deg)"
+            instance = true
+        }else if (instance){
+            let sort = bblSort2(mailArray)
+            chevron1.style.transform = "rotate(180deg)"
+            instance = false
+        }
+        let tbody = document.querySelector("tbody");
+        mailArray.forEach(element => {
+            tbody.append(element[0])
+        })
+        mailArray = [];
+        })

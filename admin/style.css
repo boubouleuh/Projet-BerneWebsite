@@ -236,7 +236,10 @@ img:hover
     opacity: 75%;
     cursor: pointer;
 }
-
+.chevron
+{
+    transition: 1s;
+}
 .search
 {
     justify-self: center;

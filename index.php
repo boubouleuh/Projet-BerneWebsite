@@ -49,7 +49,7 @@ try {
                 <span>Bern</span><img src="media/flag.webp" height="160" width="160" alt="petit logo suisse">
                 </div>
                 <div id="links">
-                    <a href="#">Alpes</a><a href="#">Sports</a><a href=#>Nourritures</a>
+                    <a href="#imgstart">Alpes</a><a href="#imgmiddle">Sports</a><a href=#imgend>Nourritures</a>
                 </div>
                 <div id="icons">
                     <a aria-label="Bouton contact" href="https://www.amazon.fr/t%C3%A9l%C3%A9phonie-t%C3%A9l%C3%A9phone-portable-smartphone/b?ie=UTF8&node=13910711">
@@ -247,9 +247,9 @@ try {
                 </div>
                 <div class="separate-bar" id="decfooter">
                     <p class="linktitle">Découvertes</p>
-                    <a href="#">Alpes bernoises</a>
-                    <a href="#">Sports</a>
-                    <a href="#">Specialités culinaires</a>
+                    <a href="#imgstart">Alpes bernoises</a>
+                    <a href="#imgmiddle">Sports</a>
+                    <a href="#imgend">Specialités culinaires</a>
                 </div>
             </div>
         </footer>
