@@ -1,7 +1,7 @@
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const h1 = document.getElementsByTagName('h1')[0]
-    console.log(document.body.offsetWidth)
     if (!document.body.offsetWidth > 576){
     h1.style.transform = "translateY(-1.2003vw)"
     }else{
@@ -15,17 +15,17 @@ const img2 = document.querySelector('.img-content-2')
 const img3 = document.querySelector('.img-content-3')
 const heroImage = [img1, img2, img3]
 
+
+
 // Callback function executed during observe.
 const callback = function( entries, observer ) {
   // Target the first entry available.
   let observedImg = entries[0];
 
-  // Log observer entry data.
-  console.log( observedImg );
 
    if (!observedImg.isIntersecting) {
     observedImg.target.style.transition = '';
-    console.log(observedImg,img2)
+   
     if (observedImg.target == img2){
         observedImg.target.style.transform = 'translateX(-63.1712vw)'
 
@@ -72,10 +72,9 @@ const callback2 = function( entries, observer ) {
     let observedImg2 = entries[0];
   
 
-    console.log( observedImg2 );
   
      if (observedImg2.isIntersecting) {
-      console.log(observedImg2)
+
         document.getElementById("header-menu").style.transform = 'translateY(-5vw)'
         document.getElementById("header-menu").style.opacity = '0%'
   
@@ -144,3 +143,16 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
 
 })
+
+
+
+const form = document.getElementById("newsletter-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch("newsletter.php", {
+        method: "POST",
+        body: data
+    });
+});

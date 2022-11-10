@@ -9,27 +9,20 @@ define('USERNAME', $_ENV['USER']);
 define('PASSWORD', $_ENV['PASSWD']);
 
 $conn = "";
-if (isset($_POST['limit'])){
-    $a = $_POST['limit'];
-}else{
-    $a=0;
-}
+
+$email = htmlspecialchars($_POST['newsletter']);
 
 try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
-
     $conn->setAttribute(PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION);
-    $conn->setAttribute(PDO::ATTR_AUTOCOMMIT,FALSE);
-    $sth = $conn->prepare("SELECT * FROM register_newsletter ORDER BY Date LIMIT 10 OFFSET :limit ");
-    $sth -> bindParam(":limit",$a, PDO::PARAM_INT);
-    $sth->execute();
-    $emails = $sth->fetchALl();
-
-    echo json_encode($emails);
-
-
+    if (isset($_POST["newsletter"])) {
+        $sth = $conn->prepare("INSERT INTO register_newsletter (Mail) VALUES (:email)");
+        $sth->bindParam(":email", $email);
+        $sth->execute();
+    }
 } catch(PDOException $e) {
-    echo "Connection failed: "
-        . $e->getMessage();
 }
+
+
+?>

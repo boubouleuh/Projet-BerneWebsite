@@ -89,15 +89,12 @@ showMore.addEventListener("click", function(){
         return response.json();
     })
         .then(function (myJson) {
-            console.log(myJson)
             length += myJson.length
             compteurNow.textContent = length
             if (myJson.length < 10){
-                console.log("true")
                 showMore.classList.remove("displayvisible")
             }else {
                 showMore.classList.add("displayvisible")
-                console.log("false")
 
             }
             rows(myJson)
@@ -144,7 +141,7 @@ searchInput.addEventListener("keyup", function (e) {
     {
         showMore.classList.remove("displayvisible")
     }
-    console.log(e.key)
+
     if (e.key != "Enter" && e.key != "AltGraph" && e.key != "Control" && e.key != "Alt" ) {
         tbody.querySelectorAll('tr').forEach(function (element) {
             element.remove()
@@ -160,7 +157,7 @@ searchInput.addEventListener("keyup", function (e) {
             .then(function (response) {
                 return response.json();
             }).then(function (myJson) {
-            console.log(myJson)
+
             compteurNow.textContent = myJson.length;
             compteurTotal.textContent = myJson.length;
             rows(myJson)
@@ -235,12 +232,10 @@ const titletest = document.querySelector(".titletable");
 let mailArray = [];
 chevron1.addEventListener("click" , function(e) {
             let trlist = document.querySelector('tbody').children
-            console.log(trlist)
 
 
         for (let element of trlist) {
             mailArray.push([element, element.children[0].textContent.toLowerCase()])
-            console.log(mailArray)
         }
         if (!instance) {
             let sort = bblSort(mailArray);
