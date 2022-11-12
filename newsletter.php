@@ -16,7 +16,7 @@ try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION);
-    if (isset($_POST["newsletter"])) {
+    if (isset($email)) {
         $sth = $conn->prepare("INSERT INTO register_newsletter (Mail) VALUES (:email)");
         $sth->bindParam(":email", $email);
         $sth->execute();

@@ -8,13 +8,11 @@ define('DATABASE', $_ENV['BDD']);
 define('USERNAME', $_ENV['USER']);
 define('PASSWORD', $_ENV['PASSWD']);
 
+$a=0;
 $conn = "";
 if (isset($_POST['limit'])){
     $a = $_POST['limit'];
-}else{
-    $a=0;
 }
-
 try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
 

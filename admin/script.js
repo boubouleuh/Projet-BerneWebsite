@@ -239,7 +239,7 @@ chevron1.addEventListener("click" , function(e) {
         }
         if (!instance) {
             let sort = bblSort(mailArray);
-            chevron1.style.transform = "rotate(-18000deg)"
+            chevron1.style.transform = "rotate(0deg)"
             instance = true
         }else if (instance){
             let sort = bblSort2(mailArray)

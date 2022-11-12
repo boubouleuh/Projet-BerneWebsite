@@ -1,10 +1,5 @@
 <?php
 
-// CREATE USER 'admin'@'localhost' IDENTIFIED BY 'perms!pass95';
-//
-//GRANT ALL PRIVILEGES ON permis.* TO 'admin'@'localhost';
-//
-//FLUSH PRIVILEGES;
 
 session_start();
 
