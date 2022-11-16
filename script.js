@@ -120,15 +120,23 @@ document.getElementById("inputemail").addEventListener("focus", function(e){
     this.classList.remove("invalid")
 })
 
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault()
+
+
+const form = document.getElementById("newsletter-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
     const rep = document.querySelector(".errormsg")
     let email=document.getElementById("inputemail");
     let emailRegExp = new RegExp('^[a-zA-Z0-9.-]+[@]{1}[a-zA-Z0-9.-]+[.]{1}[a-z]{2,10}$', 'g');
     if (emailRegExp.test(email.value)){
-        let data = new FormData();
-        data.append("newsletter", email.value);
-        fetch("index.php", { method: "POST", body: data });
+
+
+        const data = new FormData(form);
+        fetch("newsletter.php", {
+            method: "POST",
+            body: data
+        });
         email.classList.remove("invalid")
         email.classList.add("valid")
         rep.textContent = "Vous êtes maintenant inscrit !"
@@ -141,18 +149,4 @@ document.querySelector('form').addEventListener('submit', function(e) {
         rep.style.color = "red"
     }
 
-
-})
-
-
-
-const form = document.getElementById("newsletter-form");
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    fetch("newsletter.php", {
-        method: "POST",
-        body: data
-    });
 });

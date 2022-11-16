@@ -18,7 +18,7 @@ try {
     $conn->setAttribute(PDO::ATTR_AUTOCOMMIT,FALSE);
     $sth = $conn->prepare("SELECT * FROM register_newsletter");
     $sth->execute();
-    $emails = $sth->fetchALl(PDO::FETCH_ASSOC);
+    $emails = $sth->fetchAll(PDO::FETCH_ASSOC);
 
     echo json_encode($emails);
 

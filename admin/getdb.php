@@ -11,7 +11,7 @@ define('PASSWORD', $_ENV['PASSWD']);
 $a=0;
 $conn = "";
 if (isset($_POST['limit'])){
-    $a = $_POST['limit'];
+    $a = htmlspecialchars($_POST['limit']);
 }
 try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
@@ -22,7 +22,7 @@ try {
     $sth = $conn->prepare("SELECT * FROM register_newsletter ORDER BY Date LIMIT 10 OFFSET :limit ");
     $sth -> bindParam(":limit",$a, PDO::PARAM_INT);
     $sth->execute();
-    $emails = $sth->fetchALl();
+    $emails = $sth->fetchAll();
 
     echo json_encode($emails);
 

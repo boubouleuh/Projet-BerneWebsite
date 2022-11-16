@@ -8,14 +8,15 @@
     define('PASSWORD', $_ENV['PASSWD']);
 
     $conn = "";
-    echo $_POST['delete'];
+    $delete = htmlspecialchars($_POST["delete"]);
+    echo $delete;
 try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION);
 
     $sth = $conn->prepare("DELETE FROM register_newsletter WHERE ID=:id");
-    $sth -> bindParam(":id",$_POST['delete'], PDO::PARAM_INT);
+    $sth -> bindParam(":id",$delete, PDO::PARAM_INT);
     $sth->execute();
 } catch(PDOException $e) {
     echo "Connection failed: "

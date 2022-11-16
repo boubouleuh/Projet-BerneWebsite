@@ -9,7 +9,7 @@ define('USERNAME', $_ENV['USER']);
 define('PASSWORD', $_ENV['PASSWD']);
 
 $conn = "";
-$entrie = $_POST["entries"]."%";
+$entrie = htmlspecialchars($_POST["entries"])."%";
 
 try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
@@ -20,7 +20,7 @@ try {
     $sth = $conn->prepare("SELECT DISTINCT * FROM register_newsletter WHERE mail LIKE :research ORDER BY mail");
     $sth -> bindParam(":research",$entrie);
     $sth->execute();
-    $emails = $sth->fetchALl(PDO::FETCH_ASSOC);
+    $emails = $sth->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($emails);
 
 } catch(PDOException $e) {

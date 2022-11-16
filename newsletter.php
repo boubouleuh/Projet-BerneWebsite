@@ -11,12 +11,12 @@ define('PASSWORD', $_ENV['PASSWD']);
 $conn = "";
 
 $email = htmlspecialchars($_POST['newsletter']);
-
+$pattern = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/g";
 try {
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE, USERNAME, PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION);
-    if (isset($email)) {
+    if (isset($email) || preg_match($pattern, $email)) {
         $sth = $conn->prepare("INSERT INTO register_newsletter (Mail) VALUES (:email)");
         $sth->bindParam(":email", $email);
         $sth->execute();

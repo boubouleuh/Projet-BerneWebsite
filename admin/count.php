@@ -17,7 +17,7 @@ PDO::ERRMODE_EXCEPTION);
 $conn->setAttribute(PDO::ATTR_AUTOCOMMIT,FALSE);
 $sth = $conn->prepare("SELECT COUNT(*) FROM register_newsletter");
 $sth->execute();
-$emails = $sth->fetchALl();
+$emails = $sth->fetchAll();
 
 echo json_encode($emails);
 
