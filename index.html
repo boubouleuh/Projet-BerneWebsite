@@ -199,7 +199,7 @@
             <div id="footerreplace">
                 <p>NewsLetter</p>
                 <form id="newsletter-form" method="post" novalidate>
-                    <input type="email" name="newsletter" class="inputmail" id="inputemail" placeholder="Entrez votre mail">
+                    <input type="email" name="newsletter" class="inputmail" id="inputemail" placeholder="Entrez votre mail" pattern='^[a-zA-Z0-9.-]+[@]{1}[a-zA-Z0-9.-]+[.]{1}[a-z]{2,10}$'>
                     <span class="errormsg"></span>
                     <button type="submit">Envoyer</button>
                 </form>
